@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Candidate Interview Form</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    h2 {
+      border-bottom: 2px solid #eee;
+      padding-bottom: 5px;
+      margin-top: 30px;
+      color: #333;
+    }
+    p.description {
+      text-align: center;
+      color: #666;
+      margin-bottom: 30px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    .row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .row .field {
+      flex: 1;
+      min-width: 250px;
+    }
+    button {
+      margin-top: 30px;
+      background: #0066ff;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background: #004ecc;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Candidate Interview Form</h1>
+    <p class="description">
+      Fill in all information needed to generate your resume for the Technov / StartUpDigital mission.
+    </p>
+
+    <form method="POST" action="/api/resume">
+
+      <h2>Personal Information</h2>
+      <div class="row">
+        <div class="field">
+          <label>Full Name</label>
+          <input type="text" name="fullName" required />
+        </div>
+        <div class="field">
+          <label>Email Address</label>
+          <input type="email" name="email" required />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label>Location (City, Country)</label>
+          <input type="text" name="location" />
+        </div>
+        <div class="field">
+          <label>Professional Title</label>
+          <input type="text" name="title" placeholder="Junior Front-End Developer" />
+        </div>
+      </div>
+
+      <h2>Professional Profile</h2>
+      <label>Short Professional Summary</label>
+      <textarea name="summary"></textarea>
+
+      <h2>Education</h2>
+      <label>Education Details</label>
+      <textarea name="education"></textarea>
+
+      <h2>Professional Experience</h2>
+      <label>Experience</label>
+      <textarea name="experience"></textarea>
+
+      <h2>Technical Skills</h2>
+      <label>Front-End Skills</label>
+      <input type="text" name="frontend" />
+
+      <label>Back-End Skills</label>
+      <input type="text" name="backend" />
+
+      <label>Tools & Version Control</label>
+      <input type="text" name="tools" />
+
+      <h2>Projects</h2>
+      <label>Projects</label>
+      <textarea name="projects"></textarea>
+
+      <h2>Availability & Preferences</h2>
+      <label>Availability</label>
+      <select name="availability">
+        <option value="">Select</option>
+        <option>10 hours/week</option>
+        <option>15 hours/week</option>
+        <option>Flexible</option>
+      </select>
+
+      <label>Remote Work Experience</label>
+      <select name="remoteExperience">
+        <option value="">Select</option>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+
+      <h2>Professional Links</h2>
+      <label>GitHub URL</label>
+      <input type="url" name="github" />
+
+      <label>LinkedIn URL</label>
+      <input type="url" name="linkedin" />
+
+      <h2>Personal Qualities</h2>
+      <label>Strengths & Soft Skills</label>
+      <textarea name="softSkills"></textarea>
+
+      <button type="submit">Submit Candidate Information</button>
+
+    </form>
+  </div>
+</body>
+</html>

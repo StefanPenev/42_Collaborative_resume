@@ -1,0 +1,23 @@
+{
+  "name": "collaborative_resume",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/cors": "^11.2.0",
+    "@fastify/formbody": "^8.0.2",
+    "@fastify/static": "^9.0.0",
+    "docx": "^9.5.1",
+    "docxtemplater": "^3.67.6",
+    "fastify": "^5.7.1",
+    "fs": "^0.0.1-security",
+    "pizzip": "^3.2.0"
+  }
+}
